@@ -33,14 +33,30 @@ namespace HelloWorld
 
         private void txtChangeuxName(object sender, TextChangedEventArgs e)
         {
-            TextBox box = sender as TextBox;
-            this.uxSubmit.IsEnabled = box.Text.Length > 100;
+            //TextBox box = sender as TextBox;
+            //this.uxSubmit.IsEnabled = box.Text.Length > 100;
+            if (uxName.Text.Length > 0)
+            {
+                if (uxPassword.Text.Length > 0)
+                {
+                    this.uxSubmit.IsEnabled = true;
+                }
+                else
+                {
+                    this.uxSubmit.IsEnabled = false;
+                }
+            }
+            else
+            {
+                this.uxSubmit.IsEnabled = false;
+            }
+
         }
 
-        private void txtChangeuxPassword(object sender, TextChangedEventArgs e)
-        {
-            TextBox box1 = sender as TextBox;
-            this.uxSubmit.IsEnabled = box1.Text.Length > 0;
-        }
+        //private void txtChangeuxPassword(object sender, TextChangedEventArgs e)
+        //{
+        //    TextBox box1 = sender as TextBox;
+        //    this.uxSubmit.IsEnabled = box1.Text.Length > 0;
+        //}
     }
 }

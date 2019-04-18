@@ -12,7 +12,7 @@
         <TextBlock>Enter Name:</TextBlock>
         <TextBox x:Name="uxName" TextChanged="txtChangeuxName" ></TextBox>
         <TextBlock>Enter Password:</TextBlock>
-        <TextBox x:Name="uxPassword" TextChanged="txtChangeuxPassword"></TextBox>
+        <TextBox x:Name="uxPassword" TextChanged="txtChangeuxName"></TextBox>
         <Button x:Name="uxSubmit" IsEnabled ="False"  Click="uxSubmit_Click" Background="#FFA8E49E">Submit</Button>
         
         <Button>
