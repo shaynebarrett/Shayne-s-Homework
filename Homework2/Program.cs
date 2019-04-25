@@ -18,20 +18,20 @@ namespace Homework2
             users.Add(new Models.User { Name = "Steve", Password = "steve" });
             users.Add(new Models.User { Name = "Lisa", Password = "hello" });
 
-          
 
+            Console.WriteLine("Problem 1");
             var displayHelloPWs =
                 from user in users
                 where user.Password == "hello"
                 select user;
 
-            Console.WriteLine("Problem 1");
-            
-            Console.WriteLine("Here are all of the Name's who have 'Hello' as their password: ");
+            Console.WriteLine("Here are all of the user's who have 'Hello' as their password: ");
             foreach (var element in displayHelloPWs)
             {
                 Console.WriteLine($"Name = {element.Name}; Password = {element.Password} ");
             }
+
+
             Console.WriteLine("**************************************");
             Console.WriteLine("Problem 2");
             var deleteLowercase = users.Find(t => t.Name.ToLower() == t.Password);
