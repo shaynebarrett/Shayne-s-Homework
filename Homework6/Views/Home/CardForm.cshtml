@@ -1,0 +1,43 @@
+﻿@model Homework6.Models.BirthdayCardInfo
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="~/Content/styles.css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <title>CardForm</title>
+</head>
+
+@{
+    Layout = null;
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <h4 class="panel-heading text-center">Send a Birthday Card</h4>
+
+    <p>
+        <label>To:</label>@Html.TextBoxFor(t => t.To,
+            new { @class = "form-control", style = "width: 200px;" })
+    </p>
+
+    <p>
+        <label>From:</label>@Html.TextBoxFor(t => t.From,
+new { @class = "form-control", style = "width: 200px;" })
+    </p>
+
+    <p>
+        <label>Message:</label>@Html.TextBoxFor(t => t.Message,
+new { @class = "form-control", style = "width: 200px;" })
+    </p>
+
+
+
+    <input type="submit" class="btn btn-success" value="Send Card" />
+
+    @*<p>To: @Html.TextBoxFor(t => t.To)</p>
+        <p>From: @Html.TextBoxFor(t => t.From)</p>
+        <p>Message: @Html.TextBoxFor(t => t.Message)</p>
+        <input type="submit" value="Send Card" />*@
+}
